@@ -58,8 +58,8 @@ agregation
 {$limit: 10}
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-{founded_month: 7}
-{$limit: 1000e}
+{founded_month: {$gte: 7}}
+{$limit: 1000}
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 {$and: [{founded_year: {$lte:2000}}, {"acquisition.price_amount": {$gte:10000000}}]}
