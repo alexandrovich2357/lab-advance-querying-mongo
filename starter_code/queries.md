@@ -12,7 +12,10 @@
 
 <!-- Your Code Goes Here -->
 {number_of_employees: {$gt: 5000}}
+agregation
+    {$limit: 20}
 {number_of_employees:1}
+
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
@@ -32,7 +35,7 @@
 <!-- Your Code Goes Here -->
     {$and: [{number_of_employees: {$lte: 1000}},{founded_year: {$lte: 2005}}]}
     {name:1,number_of_employees: 1,_id:0}
-
+    {$limit: 10}
 ### 6. All the companies that don't include the `partners` field.
 
 <!-- Your Code Goes Here -->
